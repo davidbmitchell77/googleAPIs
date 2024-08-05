@@ -1,0 +1,110 @@
+/*------------------------------------------------------------------------*/
+/* @stylesheet    - googleBooks.css                                       */
+/* @date          - 04-AUG-2024                                           */
+/* @author        - David B. Mitchell                                     */
+/* @description   - Stylesheet for googleBooks.html web page.             */
+/*------------------------------------------------------------------------*/
+body {
+  color: grey;
+  font-family: sans-serif;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+button {
+  border: none;
+  border-radius: 16px;
+  float: right;
+  background: #0066cc;
+  color: #ffffff;
+  font-family: tahoma,verdana,tahoma,arial;
+  width: 4rem;
+  height: 2rem;
+  margin-right: 8.3rem;
+}
+button:disabled {
+  background-color: #a0a0a0;
+  pointer-events: none;
+}
+button:hover:enabled {
+  background-color: #004c99;
+}
+.div1 {
+  border-color: #ccdd00;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 25px;
+  padding: 1rem;
+  height: 20rem;
+  width: 48rem;
+}
+h2 {
+  font-family: calibri,arial;
+  margin-top: -5px;
+}
+img {
+  margin-left: -1px;
+}
+input {
+  border-color: #d3d3d3;
+  border-style: solid;
+  border-width: 1px;
+  color: grey;
+  font-family: tahoma,arial,verdana;
+  height: 2rem;
+  padding-left: 0.75rem;
+  margin-bottom: 10px;
+  width: 20rem;
+}
+input[type="search"]:focus {
+  outline: none !important;
+  border:1px solid turquoise;
+  box-shadow: 0 0 10px #719ECE;
+}
+label {
+  font-family: tahoma,arial,verdana;
+  font-weight: bold;
+}
+textarea {
+  color: #004c99;
+  font-family: sans-serif,verdana,tahoma,calibri,fixed,consolas,courier;
+}
+textarea:disabled {
+  resize: none;
+}
+textarea::-webkit-scrollbar {
+  width: 12px;
+}
+textarea::-webkit-scrollbar-track {
+  background: #0066cc;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #ffa500;
+  border-radius: 20px;
+  border: 3px solid #ffff00;
+  height: 1.5rem;
+}
+.loader {
+  width : 80px;
+  height: 80px;
+  border: 16px solid #ffffff;
+  border-top: 16px solid turquoise;
+  border-radius: 50%;
+  display: none;
+  margin-top: -12rem;
+  margin-left: 12rem;
+}
+.spin {
+  animation-name: spinner;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes
+spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
