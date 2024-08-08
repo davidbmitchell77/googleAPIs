@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------------*/
+/* @stylesheet    - style.css                                         */
+/* @date          - 07-AUG-2024                                       */
+/* @author        - David B. Mitchell                                 */
+/* @description   - Stylesheet for googleBooks.html web page.         */
+/*--------------------------------------------------------------------*/
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: seashell;
+  color: darkviolet;
+  font-family: calibri, arial, sans-serif;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+}
+
+img {
+  margin-left: -1px;
+  opacity: 0.75;
+}
+
+input[name="input1"] {
+  border-color: silver;
+  border-style: inset;
+  border-width: 1px;
+  color: #36454f;
+  font-family: "Comic Sans MS", sans-serif;
+  margin-top: 20px;
+  outline: none;
+}
+
+textarea {
+  background-color: white;
+  border-color: silver;
+  color: #36454f;
+  font-family: "Comic Sans MS","Courier New",sans-serif;
+  outline: none;
+}
