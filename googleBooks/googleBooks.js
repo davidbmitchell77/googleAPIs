@@ -1,6 +1,6 @@
 "use strict"
 /*------------------------------------------------------------------------*/
-/* @stylesheet    - googleBooks.js                                        */
+/* @script        - googleBooks.js                                        */
 /* @date          - 04-AUG-2024                                           */
 /* @author        - David B. Mitchell                                     */
 /* @description   - Javascript for googleBooks.html web page.             */
