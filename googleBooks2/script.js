@@ -5,6 +5,7 @@
 /* @description   - Javascript for googleBooks.html web page.         */
 /*--------------------------------------------------------------------*/
 const baseUrl = 'https://www.googleapis.com/books/v1/volumes?q=';
+let httpError = false;
 
 const keyup = (event) => {
   let url = encode(baseUrl + event.target.value);
@@ -13,10 +14,14 @@ const keyup = (event) => {
   getBooks(url, body).then((response) => {
     let { items, error } = response;
     if (items) {
-      console.info(response);
-      document.querySelector('textarea').value = JSON.stringify(response, null, 2);
+      if (!httpError) {
+        console.info(response);
+        document.querySelector('textarea').value = JSON.stringify(response, null, 2);
+      }
     }
     else if (error) {
+      httpError = true;
+      window.setTimeout(()=> { httpError = false; }, 500);
       console.error(error);
       document.querySelector('textarea').value = (`error ${error.code}: ${error.message}`);
     }
