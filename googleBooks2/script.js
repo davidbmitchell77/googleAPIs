@@ -66,5 +66,5 @@ const init = (() => {
   document.querySelector('a').setAttribute('href', 'https://books.google.com');
   document.querySelector('a').setAttribute('title', `uuid: ${crypto.randomUUID()}`);
   document.querySelector('img').setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1lELf0-vnB_Y-iqh6vBgnszH6sgUpElLDeQ&s');
-  document.querySelector('[name="input1"]').setAttribute('placeholder', 'Type your search here...');
+  document.querySelector('[name="input1"]').setAttribute('placeholder', 'Type your query here...');
 });
