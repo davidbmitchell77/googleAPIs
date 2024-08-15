@@ -21,7 +21,7 @@ const keyup = (event) => {
     }
     else if (error) {
       httpError = true;
-      window.setTimeout(()=> { httpError = false; }, 500);
+      window.setTimeout(() => { httpError = false; }, 500);
       console.error(error);
       document.querySelector('textarea').value = (`error ${error.code}: ${error.message}`);
     }
