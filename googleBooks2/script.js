@@ -5,7 +5,7 @@
 /* @description   - Javascript for googleBooks.html web page.         */
 /*--------------------------------------------------------------------*/
 const baseUrl = 'https://www.googleapis.com/books/v1/volumes?q=';
-let httpError = false;
+let httpRequestError = false;
 
 const keyup = (event) => {
   let url = encode(baseUrl + event.target.value);
@@ -14,14 +14,14 @@ const keyup = (event) => {
   getBooks(url, body).then((response) => {
     let { items, error } = response;
     if (items) {
-      if (!httpError) {
+      if (!httpRequestError) {
         console.info(response);
         document.querySelector('textarea').value = JSON.stringify(response, null, 2);
       }
     }
     else if (error) {
-      httpError = true;
-      window.setTimeout(() => { httpError = false; }, 500);
+      httpRequestError = true;
+      window.setTimeout(() => { httpRequestError = false; }, 300);
       console.error(error);
       document.querySelector('textarea').value = (`error ${error.code}: ${error.message}`);
     }
@@ -63,6 +63,7 @@ const getBooks2 = ((url, request) => {
 });
 
 const init = (() => {
+  console.clear();
   document.querySelector('a').setAttribute('href', 'https://books.google.com');
   document.querySelector('a').setAttribute('title', `uuid: ${crypto.randomUUID()}`);
   document.querySelector('img').setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1lELf0-vnB_Y-iqh6vBgnszH6sgUpElLDeQ&s');
