@@ -40,10 +40,10 @@ const getBooks = async (url, body) => {
 
 const getBooks2 = ((url, request) => {
   fetch(url, request)
-    .then((response) => {
+   .then((response) => {
       return response.json();
     })
-    .then((response) => {
+   .then((response) => {
       let { items, error } = response;
       if (items) {
         console.info(response);
@@ -56,7 +56,7 @@ const getBooks2 = ((url, request) => {
         textarea.value = `Error ${error.code}: ${error.message}`;
       }
     })
-    .catch((error) => {
+   .catch((error) => {
       console.error(error);
       throw error;
     });
